@@ -12,6 +12,9 @@ Once the repository cloned, do not forget to make scripts executable, "chmod +x 
 Run k8s-install_master.sh on the master
 Run k8s-install_node      on a node
 
+*Warning!* During script execution you will be asked various questions which suppose yes/no answer. Default is [N]o but in order that 
+the installation succeeds you actually need [Y]es. Default [N]o helps you keep the system in unchanged state if you decide to interrupt the script.
+
 ToDo
 ----
 

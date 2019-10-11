@@ -35,7 +35,7 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
    sudo kubeadm init --pod-network-cidr=$K8S_POD_NETWORK
 fi
 
-echo -n "[!] Copy admin.conf to $USER account? [y/n] "
+echo -n "[!] Copy admin.conf to $USER account? [y/N] "
 read REPLY
 echo ""
 if [[ $REPLY =~ ^[Yy]$ ]]; then
@@ -44,7 +44,7 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
    sudo chown $(id -u):$(id -g) $HOME/.kube/config
 fi
 
-echo -n "[!] Install Flannel network? [y/n] "
+echo -n "[!] Install Flannel network? [y/N] "
 read REPLY
 echo ""
 if [[ $REPLY =~ ^[Yy]$ ]]; then
@@ -59,6 +59,6 @@ kubectl get pods --all-namespaces
 echo ""
 echo "====================================================================================================="
 echo "[INFO] If all finished with success, go to a node and install k8s and join the node with the cluster:"
-echo "   1. run k8s-install_node.sh
-echo "   2. run kubeadm join ... (see print-outs after kubeadm init on the master)"
+echo "   1. run k8s-install_node.sh (if not done yet)"
+echo "   2. run sudo kubeadm join ... (see print-outs after kubeadm init on the master)"
 echo "====================================================================================================="

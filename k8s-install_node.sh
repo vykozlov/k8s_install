@@ -20,5 +20,5 @@ $SCRIPT_PATH/k8s-install-common.sh
 echo ""
 echo "====================================================================================================="
 echo "[INFO] If all finished with success:"
-echo "   - run kubeadm join ... (see print-outs after kubeadm init on the master)"
+echo "   - run sudo kubeadm join ... (see print-outs after kubeadm init on the master)"
 echo "====================================================================================================="

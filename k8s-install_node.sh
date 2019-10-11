@@ -14,7 +14,8 @@
 # https://stackoverflow.com/questions/4774054/reliable-way-for-a-bash-script-to-get-the-full-path-to-itself/4774063
 SCRIPT_PATH="$( cd $(dirname $0) ; pwd -P )"
 
-$($SCRIPT_PATH/k8s-install-common.sh)
+echo "[INFO] executing $SCRIPT_PATH/k8s-install-common.sh"
+$SCRIPT_PATH/k8s-install-common.sh
 
 echo ""
 echo "====================================================================================================="
